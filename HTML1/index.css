@@ -10,89 +10,6 @@ body {
   color: #333;
 }
 
-.footer {
-  background: #fff8f9;
-  color: #333;
-}
-
-/* --- Top Features --- */
-.footer-features {
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  border-bottom: 1px solid #ddd;
-  padding: 20px 0;
-}
-
-.feature {
-  display:flex;
-  align-items: center;
-  gap: 10px;
-  max-width: 250px;
-  text-align: left;
-}
-
-.feature img {
-  width: 30px;
-}
-
-.feature h4 {
-  font-size: 16px;
-  color: #8b4a64;
-}
-
-.feature p {
-  font-size: 13px;
-  color: #777;
-}
-
-/* --- Newsletter --- */
-.newsletter {
-  padding: 40px 20px;
-  border-bottom: 1px solid #ddd;
-}
-.foot{
-    display: flex;
-    justify-content: space-around;
-}
-.newsletter h3 {
-  font-weight: 600;
-  color: #333;
-}
-
-.newsletter p {
-  color: #777;
-  margin: 5px 0 20px;
-}
-
-.newsletter-form {
-  margin-bottom: 20px;
-}
-
-.newsletter input {
-  width: 300px;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-right: none;
-  border-radius: 5px 0 0 5px;
-}
-
-.newsletter button {
-  background: #8b4a64;
-  color: #fff;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 0 5px 5px 0;
-  cursor: pointer;
-  font-weight: 500;
-}
-
-.social a img {
-  width: 30px;
-  margin: 0 10px;
-}
-
-/* --- Main Footer --- */
 .footer-main {
   display: flex;
   flex-wrap: wrap;
@@ -146,12 +63,8 @@ body {
   flex-wrap: wrap;
 }
 
-.payments img {
-  height: 25px;
-  margin: 0 8px;
-}
 
-/* --- Responsive --- */
+
 @media (max-width: 768px) {
   .footer-features {
     flex-direction: column;
