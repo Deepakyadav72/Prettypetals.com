@@ -85,43 +85,68 @@ header {
 }
 
 .main-nav {
-  border-top: 1px solid #f0eaea;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  background: #fff;
+  padding: 8px 0;
 }
 
 .main-nav ul {
   display: flex;
-  align-items: center;
-  gap: 80px;
-  margin: 0;
-  padding: 0 35px;
+  justify-content: center;
+  gap: 100px;
   list-style: none;
-  background: #fff;
-  height: 54px;
+  margin: 0;
+  padding: 0;
 }
 
 .main-nav li {
   position: relative;
 }
 
-.main-nav li a {
-  font-size: 16px;
-  color: #292929;
+.main-nav a {
   text-decoration: none;
-  letter-spacing: 1.3px;
-  font-weight: 400;
-  padding: 0 4px;
-  transition: color 0.2s;
+  font-size: 15.5px;
+  font-weight: 500;
+  color: #000;
+  padding: 10px 4px;
+  display: block;
+  transition: color 0.3s;
 }
 
-.main-nav li.active a,
-.main-nav li a:hover {
-  color: #a8829d;
-  font-weight: 700;
+.main-nav a.active,
+.main-nav a:hover {
+  color: #b45779;
+}
+
+.dropdown-menu {
+  display: inline;
+  position: absolute;
+  left: -200px;
+  background: #f4f1ef;
+  border-radius: 4px;
+  padding: 12px 16px;
+  visibility: hidden;
+  transition: opacity 0.25s ease, transform 0.25s ease;
+  z-index: 100;
+}
+
+/* Items */
+.dropdown-menu ul li a {
+  display: grid;
+  grid-template-rows: repeat(4, 4);
+  padding: 8px 4px;
+  font-size: 15.5px;
+  color: #000;
 }
 
  
-
-
+/* Show on hover */
+.dropdown:hover .dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0px);
+}
 
 
 .pretty{
@@ -375,6 +400,7 @@ body {
   gap: 32px;
   padding: 40px 0;
 }
+
 .collection-card {
   background: #fff;
   border: 1px solid #ececec;
@@ -385,25 +411,36 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  overflow: hidden; /* Added */
 }
+
 .collection-card img {
   width: 100%;
-  border-radius: 14px 14px 0 0;
+  border-radius: 14px 14px;
   height: 270px;
   object-fit: cover;
+  transition: transform 0.4s ease; /* Added */
 }
+
+/* Image Zoom Effect on Hover */
+.collection-card:hover img {
+  transform: scale(1.08); /* Added */
+}
+
 .collection-card h2 {
   margin: 24px 0 8px 0;
   font-size: 2rem;
   font-weight: 500;
   text-align: center;
 }
+
 .collection-card p {
   color: #333;
   margin: 0 0 32px 0;
   font-size: 1.07rem;
   text-align: center;
 }
+
 .collection-card button {
   position: relative;
   background: #fff;
@@ -421,7 +458,3 @@ body {
   background: #d97a91;
   color: #fff;
 }
-
-
-
-
